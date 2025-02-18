@@ -38,7 +38,13 @@ return {
       lspconfig.lua_ls.setup({
         capabilities = capabilities,
       })
+
+      --Javascript/Typescript
       lspconfig.ts_ls.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.eslint.setup({
         capabilities = capabilities,
       })
 
