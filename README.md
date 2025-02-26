@@ -12,7 +12,7 @@
 ![coding](https://github.com/user-attachments/assets/127a4295-8d0c-4b17-aeda-277d2dd7a4af)
 
 
-## Table of content
+## Table of contents
 - [Requirement](#requirement)
 - [Plugins](#plugins)
 - [Shortcuts](#Shortcuts)
