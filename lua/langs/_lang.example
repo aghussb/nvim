@@ -1,0 +1,45 @@
+-- Set up nvim-cmp integration with LSP
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+local lspconfig = require("lspconfig")
+
+lspconfig.ts_ls.setup({
+	capabilities = capabilities,
+})
+
+-- Set up conform for formatting
+local conform = require("conform")
+
+conform.setup({
+	formatters_by_ft = {
+		typescript = { "prettier" },
+	},
+})
+
+-- Set up another config luasnip
+local luasnip = require("luasnip")
+luasnip.filetype_extend("typescript", { "javascript" })
+
+local s = luasnip.snippet
+local t = luasnip.text_node
+local i = luasnip.insert_node
+
+luasnip.add_snippets("typescript", {
+  s("snip", {
+    t("write this("), i(1, '"Hello, World!"'), t(");")
+  })
+})
+
+-- Create an autocommand for unknown filetype to set the comment string format
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = "typescript",
+	callback = function()
+		vim.opt_local.commentstring = "//%s"
+	end,
+})
+
+-- Install plugin with lazy
+-- return {
+--   "pmizio/typescript-tools.nvim",
+--    dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
+--    opts = {},
+-- }
