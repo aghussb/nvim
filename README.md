@@ -151,7 +151,7 @@ conform.setup({
 > [!NOTE] 
 > You can add some configs like snippet from luasnip, commentstring, etc.
 
-4. Open file `./lua/langs/init.lua` and adding code `require("langs.javascript")` .
+4. Open file `./lua/langs/init.lua` and adding code `require("langs.typescript")` .
 
 ### Using external plugins
 
