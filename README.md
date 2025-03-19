@@ -189,6 +189,6 @@ require("lazy").setup({
 
 | Git Repo                                                    | For                                                                                              |
 | ------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| [LazyVim](https://lazyvim.org)                          | Major portions of this configuration, including lazy-loading and plugin setups, etc. |
-| [Gl00ria Nvim](https://github.com/Gl00ria/nvim) | Give me some inspiration about keymap documentation and folder structure organization. | 
+| [LazyVim](https://lazyvim.org)                          | The main part of this configuration, including lazy for plugin manager and file structure inspiration. |
+| [Gl00ria Nvim](https://github.com/Gl00ria/nvim) | Gave me some inspiration about keymap documentation and plugins folder structure. | 
 
