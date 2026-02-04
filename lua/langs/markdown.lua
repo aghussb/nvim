@@ -3,8 +3,12 @@ return {
 		"neovim/nvim-lspconfig",
 		opts = {
 			servers = {
-				prismals = {},
+				marksman = {},
 			},
 		},
+	},
+	{
+		"OXY2DEV/markview.nvim",
+		ft = "markdown",
 	},
 }

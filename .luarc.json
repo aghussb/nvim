@@ -1,5 +1,21 @@
 {
-    "diagnostics.globals": [
-        "vim"
-    ]
+   "runtime.version": "LuaJIT",
+   "runtime.path": [
+      "lua/?.lua",
+      "lua/?/init.lua"
+   ],
+   "diagnostics.globals": [
+      "vim"
+   ],
+   "workspace.checkThirdParty": false,
+   "workspace.library": [
+      "$VIMRUNTIME"
+   ],
+   "hint": {
+      "enable": true
+   },
+   "codeLens": {
+      "enable": true
+   },
+   "completion.enable": true
 }

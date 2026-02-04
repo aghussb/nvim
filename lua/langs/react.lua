@@ -5,16 +5,20 @@ return {
 			-----------------------------------------------------------
 			-- vtsls settings
 			-----------------------------------------------------------
-			table.insert(opts.servers.vtsls.filetypes, "typescript")
+			table.insert(opts.servers.vtsls.filetypes, "javascriptreact")
+			table.insert(opts.servers.vtsls.filetypes, "typescriptreact")
 			return opts
 		end,
 	},
-
 	{
 		"mfussenegger/nvim-lint",
 		opts = {
 			linters_by_ft = {
-				typescript = {
+				javascriptreact = {
+					"eslint_d",
+					"biomejs",
+				},
+				typescriptreact = {
 					"eslint_d",
 					"biomejs",
 				},
@@ -25,7 +29,13 @@ return {
 		"stevearc/conform.nvim",
 		opts = {
 			formatters_by_ft = {
-				ts = {
+				javascriptreact = {
+					"prettierd",
+					"prettier",
+					"biome",
+					stop_after_first = true,
+				},
+				typescriptreact = {
 					"prettierd",
 					"prettier",
 					"biome",
@@ -38,7 +48,8 @@ return {
 		"L3MON4D3/LuaSnip",
 		opts = {
 			filetype_extend = {
-				typescript = { "javascript" },
+				javascriptreact = { "html" },
+				typescriptreact = { "html", "javascriptreact" },
 			},
 		},
 	},
