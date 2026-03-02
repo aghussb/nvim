@@ -70,6 +70,7 @@ configs.treesitter = {
 	"yaml",
 	"sql",
 	"php",
+	"vue",
 }
 
 configs.rg_rules = {
