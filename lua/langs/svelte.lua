@@ -7,9 +7,10 @@ return {
 			-----------------------------------------------------------
 			local globalPlugins = opts.servers.vtsls.settings.vtsls.tsserver.globalPlugins
 
+			table.insert(opts.servers.vtsls.filetypes, "svelte")
 			table.insert(globalPlugins, {
 				name = "typescript-svelte-plugin",
-				location = vim.env.MASON .. "/svelte-language-server/node_modules/typescript-svelte-plugin",
+				location = vim.env.MASON .. "/packages/svelte-language-server/node_modules/typescript-svelte-plugin",
 				enableForWorkspaceTypeScriptVersions = true,
 				languages = { "svelte" },
 				configNamespace = "typescript",
